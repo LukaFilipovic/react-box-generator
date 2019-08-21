@@ -17,10 +17,10 @@ export default class Boxform extends Component {
     render() {
         return (
             <div className='BoxForm'>
-                <form className='BoxForm__form' action="">
+                <form className='BoxForm__form' onSubmit={(e) => {e.preventDefault();this.props.handleSubmit(this.state.color)}} action="">
                     <label htmlFor="color" className='BoxForm__label'>Choose color</label>
                     <input type="text" name="color" id="color" className="BoxForm__input" onChange={this.handleChange} value={this.state.color} />
-                    <button type="button" className='BoxForm__button' onClick={() => this.props.handleSubmit(this.state.color)} >Add box</button>
+                    <button type="submit" className='BoxForm__button'  >Add box</button>
                 </form>
             </div>
         )
