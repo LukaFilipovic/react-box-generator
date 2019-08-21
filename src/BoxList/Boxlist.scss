@@ -1,0 +1,7 @@
+.BoxList{
+    padding: 20vh 0px;
+    &__boxes{
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
